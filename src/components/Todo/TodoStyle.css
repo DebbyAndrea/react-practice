@@ -6,7 +6,7 @@ body {
 .todo-list {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 220, 220);
+    background-image: linear-gradient(to bottom right, rgb(203, 253, 251), rgb(182, 207, 207));
     margin: auto;
     width: 50%;
     border: 2px solid #333;
@@ -20,10 +20,11 @@ body {
     height: auto; 
     min-height: 2em; 
     margin: 1em; 
+    background-color: rgb(178, 250, 248);
     color: #333;  
     align-items: center; 
-    border-radius: 2px;
-    border-bottom: 1px solid #333; 
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgb(122, 158, 163);
     text-decoration: none;
 }
 

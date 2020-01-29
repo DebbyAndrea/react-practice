@@ -1,11 +1,11 @@
 import React from "react";
 import "./TodoStyle.css"
 
-function Todo() {
+function Todo(props) {
     return (
         <div className="todo-item">
-            <input type="checkbox" />
-            <p>Check box</p>
+            <input type="checkbox" checked={props.todoList.completed} onChange={() => props.checkBoxChange(props.todoList.id)}/>
+            <p>{props.todoList.text}</p>
         </div>
       
     )

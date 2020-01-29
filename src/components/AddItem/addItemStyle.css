@@ -1,0 +1,25 @@
+.addItem {
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 2em;
+    padding: 0.2em;
+    border-radius: 3px;
+}
+
+.textArea {
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    padding: 0.2em;
+    width: 80%;
+    margin-right: 0.5em;
+}
+
+.addButton {
+    display: flex;
+    border-radius: 5px;
+    border: none;
+}

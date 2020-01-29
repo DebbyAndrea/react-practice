@@ -1,9 +1,13 @@
-import React from "react"
+import React from "react";
 
-function Navbar() {
-    return (
-        <header className="navbar">Sample react components</header>
+
+
+const Navbar = () => {
+    return(
+        <div style={{display:"flex", justifyContent: 'center'}}>
+            <h2>Todo-List</h2>
+        </div>
     )
 }
 
-export default Navbar
+export default Navbar;
