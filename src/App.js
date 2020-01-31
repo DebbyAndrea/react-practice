@@ -13,10 +13,10 @@ class App extends Component {
       todos: todoData,
       goToPlay: 0
     }
-    this.handleChange = this.handleChange.bind(this)
+    this.handleCheckBoxChange = this.handleCheckBoxChange.bind(this)
   }
   
-  handleChange = (id) => {
+  handleCheckBoxChange = (id) => {
     this.setState((prevState) => {
       const updatedTodos = prevState.todos.map((item) => {
         if(item.id === id) {
@@ -29,17 +29,32 @@ class App extends Component {
       }
     })
     console.log("Change from the event, " + id);
+    console.log(this.state.todos)
+  }
+
+  addTodoItem = (addTodo) => {
+    console.log("Inside main parent add todo item function");
+    console.log(addTodo)
+    console.log(this.state.todos)
+    // this.setState((prevState) => {
+    //   const newTodoList = prevState.todos.push(addTodo)
+    //   return {
+    //     todos: newTodoList
+    //   }
+    // })
+    const temp = this.state.todos
+    console.log(temp)
   }
 
   render() {
     const todoArray = this.state.todos.map((item) => {
-      return <Todo key={item.id} todoList={item} checkBoxChange={this.handleChange}/>
+      return <Todo key={item.id} todoList={item} checkBoxChange={this.handleCheckBoxChange}/>
     })
     
     return (
       <div className="todo-list">
         <Navbar />
-        <AddItem />
+        <AddItem addTodoItem={this.addTodoItem}/>
         {todoArray}
       </div>  
     )

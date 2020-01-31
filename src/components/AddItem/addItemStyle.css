@@ -14,12 +14,14 @@
     outline: none;
     border-bottom: 2px solid grey;
     padding: 0.2em;
-    width: 80%;
-    margin-right: 0.5em;
+    width: 92%;
+    margin-right: 0.7em;
 }
 
 .addButton {
     display: flex;
     border-radius: 5px;
     border: none;
+    outline: none;
+    cursor: pointer;
 }

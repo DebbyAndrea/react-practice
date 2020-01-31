@@ -4,6 +4,7 @@ body {
   }
 
 .todo-list {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to bottom right, rgb(203, 253, 251), rgb(182, 207, 207));
@@ -16,7 +17,7 @@ body {
 
 
 .todo-item {
-    display: flex; 
+    display: flex;
     height: auto; 
     min-height: 2em; 
     margin: 1em; 
@@ -28,5 +29,10 @@ body {
     text-decoration: none;
 }
 
+.close {
+    position: absolute;
+    right: 2.5em;
+    cursor: pointer;
+}
 
 
