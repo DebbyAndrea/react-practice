@@ -42,8 +42,8 @@ class App extends Component {
     //     todos: newTodoList
     //   }
     // })
-    const temp = this.state.todos
-    console.log(temp)
+    const temp = this.state.todos.push(addTodo)
+    console.log(JSON.stringify(temp))
   }
 
   render() {

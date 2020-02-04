@@ -16,7 +16,6 @@ class AddItem extends React.Component {
 
     addButton = () => {
         console.log("Clicked add button")
-        console.log(this.state.newItem)
         this.props.addTodoItem({
             id: Date.now(),
             text: this.state.newItem,
