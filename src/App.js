@@ -33,22 +33,32 @@ class App extends Component {
   }
 
   addTodoItem = (addTodo) => {
-    console.log("Inside main parent add todo item function");
-    console.log(addTodo)
-    console.log(this.state.todos)
-    // this.setState((prevState) => {
-    //   const newTodoList = prevState.todos.push(addTodo)
-    //   return {
-    //     todos: newTodoList
-    //   }
-    // })
-    const temp = this.state.todos.push(addTodo)
-    console.log(JSON.stringify(temp))
+    this.setState((prevState) => {
+      const newTodoList = prevState.todos.push(addTodo)
+      return {
+        todos: prevState.todos
+      }
+    })
+  }
+
+  deleteTodo = (id) => {
+    console.log("Clicked close button" + id);
+    this.setState((prevState) => {
+      for (let x in prevState.todos) {
+        if (prevState.todos[x].id === id) {
+          delete prevState.todos[x];
+          break;
+        }
+      }
+      return {
+        todos: prevState.todos
+      }
+    })
   }
 
   render() {
     const todoArray = this.state.todos.map((item) => {
-      return <Todo key={item.id} todoList={item} checkBoxChange={this.handleCheckBoxChange}/>
+      return <Todo key={item.id} todoList={item} checkBoxChange={this.handleCheckBoxChange } deleteTodo={this.deleteTodo} />
     })
     
     return (
